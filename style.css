@@ -1,0 +1,60 @@
+:root {
+    --left-side: 40vw;
+    --right-side: calc(100vw - var(--left-side));
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.image-container {
+    width: var(--left-side);
+    height: 100vh;
+    background: url('mathilde-langevin-3s09ZLMhj3c-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.2rem;
+    background-color: #55554a73;
+    width: inherit;
+    height: fit-content;
+    position: relative;
+    padding: 15px 15px;
+    display: flex;
+    top: 5vh;
+}
+
+.form-container {
+    width: var(--right-side);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f8e2;
+}
+
+li {
+    list-style: none;
+}
+
+/* @media only screen and (min-width: 600px) {
+    
+} */
