@@ -1,6 +1,7 @@
 :root {
     --left-side: 40vw;
-    --right-side: calc(100vw - var(--left-side));
+    --logo-font-family: 'Sacramento', cursive;
+    --form-font-family: 'Questrial', sans-serif;
 }
 
 * {
@@ -32,8 +33,8 @@ main {
 }
 
 .logo {
-    font-family: 'Sacramento', cursive;
-    font-size: 1.2rem;
+    font-family: var(--logo-font-family);
+    font-size: 1.35rem;
     background-color: #55554a73;
     width: inherit;
     height: fit-content;
@@ -44,15 +45,34 @@ main {
 }
 
 .form-container {
-    width: var(--right-side);
-    height: auto;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     background-color: #f4f8e2;
+    font-family: var(--form-font-family)
+}
+
+.form-desc {
+    font-size: 1.15rem;
+    letter-spacing: 0.075rem;
+}
+
+.sign-up-text {
+    padding: 1rem 0;
 }
 
 li {
     list-style: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #ac8f52;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--form-font-family);
 }
 
 /* @media only screen and (min-width: 600px) {
