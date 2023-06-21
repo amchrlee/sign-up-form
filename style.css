@@ -2,6 +2,7 @@
     --left-side: 40vw;
     --logo-font-family: 'Sacramento', cursive;
     --form-font-family: 'Questrial', sans-serif;
+    --form-background-color: #f4f8e2;
 }
 
 * {
@@ -19,7 +20,7 @@ main {
   'FILL' 1,
   'wght' 300,
   'GRAD' 0,
-  'opsz' 48
+  'opsz' 48;
 }
 
 .image-container {
@@ -30,6 +31,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
 }
 
 .logo {
@@ -37,18 +39,30 @@ main {
     font-size: 1.35rem;
     background-color: #55554a73;
     width: inherit;
-    height: fit-content;
     position: relative;
     padding: 15px 15px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
     top: 5vh;
+}
+
+.image-container p {
+    font-family: var(--form-font-family);
+    font-size: 0.8rem;
+    background-color: #55554a73;
+    width: inherit;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
 }
 
 .form-container {
     padding: 5rem;
     display: flex;
     flex-direction: column;
-    background-color: #f4f8e2;
+    background-color: var(--form-background-color);
     font-family: var(--form-font-family)
 }
 
@@ -62,9 +76,28 @@ main {
 }
 
 li {
-    list-style: none;
+    position: relative;
     padding: 0.5rem 0;
     font-size: 1rem;
+    list-style: none;
+}
+
+input {
+    border-style: 1px solid black;
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 4px 4px 5px #a09e84a8;
+    outline: none;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+}
+
+input:focus:valid {
+    border: 2px solid green;
 }
 
 button {
